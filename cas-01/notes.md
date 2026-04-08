@@ -117,10 +117,10 @@ Fajlove možemo obrisati komandom `rm`:
 
 ```bash
 $ ls
-file.txt another.txt
+file.txt another_file.txt
 $ rm file.txt
 $ ls
-another.txt
+another_file.txt
 ```
 
 Komandu `rm` treba koristiti *veoma* pažljivo, jer je brisanje koje ona vrši neopovratno!
@@ -135,7 +135,7 @@ $ ls
 01_prvi.txt 02_drugi.txt zadaci
 ```
 
-Komandom `rmdir` možemo obrisati prazne direktorijume.
+Komandom `rmdir` možemo obrisati *prazne* direktorijume.
 
 ```bash
 $ ls
@@ -143,6 +143,21 @@ $ ls
 $ rmdir zadaci
 $ ls
 01_prvi.txt 02_drugi.txt
+```
+
+Komandom `rmdir` ne možemo brisati neprazne direktorijume. Ukoliko želimo da obrišemo neki neprazan direktorijum (dakle, njega i sav njegov sadržaj), to možemo da uradimo pozivom komande `rm` sa opcijom `-r` (rekurzivno).
+
+```bash
+$ ls -R
+.:
+directory  file1.txt
+
+./directory:
+file2.txt  file3.txt
+$ rm -r directory/
+$ ls -R
+.:
+file1.txt
 ```
 
 Fajl možemo kopirati komandom `cp`.
@@ -290,3 +305,4 @@ izmeniti na sledeći način:
 
 echo "Zdravo, svete!"
 ```
+
