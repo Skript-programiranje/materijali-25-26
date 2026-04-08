@@ -1,6 +1,58 @@
 # Prva nedelja vežbi
 Ove nedelje upoznali smo se sa osnovnim komandama za navigaciju Linux fajl sistemom, baratanje fajlovima i direktorijumima, kao i manipulaciju prava pristupa fajlovima. Takođe smo napravili uvod u Beš i pisanje Beš skripta.
 
+## Navigacija fajl sistemom
+
+Trenutni radni direktorijum može se videti komandom `pwd`.
+
+```bash
+$ pwd
+/home/sp/
+```
+
+Trenutni radni direktorijum se može promeniti komandom `cd`.
+
+```bash
+$ ls
+predavanja vezbe
+$ cd vezbe
+$ pwd
+/home/sp/vezbe
+```
+
+Ukoliko imamo potrebu da se često prebacujemo između više direktorijuma, korisne su komande `pushd` i `popd`.
+
+```bash
+$ pwd
+/home/sp/vezbe
+$ dirs
+/home/sp/vezbe
+$ pushd /home/os
+/home/os /home/sp/vezbe
+$ pwd
+/home/os
+```
+
+```bash
+$ dirs
+/home/os /home/sp/vezbe
+$ pushd
+/home/sp/vezbe /home/os
+$ pwd
+/home/sp/vezbe
+```
+
+```bash
+$ dirs
+/home/sp/vezbe /home/os
+$ popd
+/home/os
+$ pwd
+/home/os
+```
+
+---
+
 ## Komanda `ls`
 
 Listanje direktorijuma može se uraditi komandom `ls`. Komanda `ls` prikazuje sadržaj tekućeg direktorijuma: fajlove, direktorijume i sve ostalo. Izuzetak su, recimo, skriveni fajlovi, čija imena počinju tačkom (na primer, tekući direktorijum `.` i roditeljski direktorijum `..`). Ukoliko želimo da vidimo skrivene fajlove, možemo navesti opciju `-a`:
@@ -127,58 +179,6 @@ alice.txt  others
 
 ./others:
 caitlyn.txt  david.txt
-```
-
----
-
-## Kretanje kroz fajl sistem
-
-Trenutni radni direktorijum može se videti komandom `pwd`.
-
-```bash
-$ pwd
-/home/sp/
-```
-
-Trenutni radni direktorijum se može promeniti komandom `cd`.
-
-```bash
-$ ls
-predavanja vezbe
-$ cd vezbe
-$ pwd
-/home/sp/vezbe
-```
-
-Ukoliko imamo potrebu da se često prebacujemo između više direktorijuma, korisne su komande `pushd` i `popd`.
-
-```bash
-$ pwd
-/home/sp/vezbe
-$ dirs
-/home/sp/vezbe
-$ pushd /home/os
-/home/os /home/sp/vezbe
-$ pwd
-/home/os
-```
-
-```bash
-$ dirs
-/home/os /home/sp/vezbe
-$ pushd
-/home/sp/vezbe /home/os
-$ pwd
-/home/sp/vezbe
-```
-
-```bash
-$ dirs
-/home/sp/vezbe /home/os
-$ popd
-/home/os
-$ pwd
-/home/os
 ```
 
 ---
