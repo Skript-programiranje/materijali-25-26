@@ -59,31 +59,33 @@ Listanje direktorijuma može se uraditi komandom `ls`. Komanda `ls` prikazuje sa
 
 ```bash
 $ ls -a
-...
 ```
 
 Takođe korisna opcija je `-l` za ispis u dugom formatu (eng. *long format*).
 
 ```bash
 $ ls -l
-...
 ```
 
-`ll` je često alijas za komandu `ls` sa opcijama `-a`, `-l`, `-F`.
+Ukoliko ne želimo da prikažemo sadržaj tekućeg direktorijuma, već želimo da preciziramo direktorijum čiji sadržaj želimo da prikažemo, to možemo uraditi tako što naziv tog direktorijuma damo kao argument komandi `ls`. Na primer:
+
+```bash
+$ ls my_directory
+```
+
+Na Linux sistemima često postoji "komanda" `ll`, koja je zapravo *alijas* za komandu `ls` sa određenim opcijama (na primer, `-a`, `-l`, `-F`).
 
 ```bash
 $ ll
-...
 ```
 
 Alijas je, kao što ime kaže, drugo ime za neku komandu (obično sa nekim specifičnim opcijama). Ako želimo da vidimo postavljene alijase, možemo to uraditi komandom `alias`:
 
 ```bash
 $ alias
-...
 ```
 
-Specifično možemo da vidimo šta predstavlja neki konkretan alijas putem `alias [naziv_alijasa]`, na primer:
+Specifično, možemo da vidimo šta predstavlja neki konkretan alijas putem `alias [naziv_alijasa]`, na primer:
 
 ```bash
 $ alias ll
