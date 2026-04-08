@@ -139,41 +139,6 @@ then
 fi
 ```
 
-## Kontrola toka - "for each" petlja
-
-Beš podržava iteriranje for petljom sa `for ... in ...` sintaksom:
-```bash
-for variable in items
-do
-    # do something
-done
-```
-pri čemu su `items` niske razdvojene belinama, a u svakoj iteraciji se u promenljivu `variable` smešta sledeća niska iz `items`. Niske `items` mogu biti navedene bukvalno, na primer:
-```bash
-for fruit in apples oranges strawberries
-do
-    echo "I like $fruit"
-done
-```
-Takođe, `items` može biti dobijeno ekspanzijom:
-```bash
-for number in {1..5}
-do
-    echo "Iteration: $number"
-done
-```
-
-### Primer "for each" petlje - iteriranje kroz argumente
-
-Ukoliko recimo, želimo da iteriramo kroz argumente, to možemo uraditi na sledeći način:
-```bash
-echo "Arguments:"
-for arg in $@
-do
-  echo "- $arg"
-done
-```
-
 Komandom `test` proveravamo da li je ispunjen uslov. `-ne` je poređenje na različitost vrednosti (`-ne` - not equal). Pored tog, imamo i naredne načine poređenja brojevnih vrednosti:
 
 | opcija | skraćeno od | značenje |
@@ -211,3 +176,39 @@ then
   exit 1
 fi
 ```
+
+## Kontrola toka - "for each" petlja
+
+Beš podržava iteriranje for petljom sa `for ... in ...` sintaksom:
+```bash
+for variable in items
+do
+    # do something
+done
+```
+pri čemu su `items` niske razdvojene belinama, a u svakoj iteraciji se u promenljivu `variable` smešta sledeća niska iz `items`. Niske `items` mogu biti navedene bukvalno, na primer:
+```bash
+for fruit in apples oranges strawberries
+do
+    echo "I like $fruit"
+done
+```
+Takođe, `items` može biti dobijeno ekspanzijom:
+```bash
+for number in {1..5}
+do
+    echo "Iteration: $number"
+done
+```
+
+### Primer "for each" petlje - iteriranje kroz argumente
+
+Ukoliko recimo, želimo da iteriramo kroz argumente, to možemo uraditi na sledeći način:
+```bash
+echo "Arguments:"
+for arg in $@
+do
+  echo "- $arg"
+done
+```
+
