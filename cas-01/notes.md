@@ -1,3 +1,6 @@
+# Prva nedelja vežbi
+Ove nedelje upoznali smo se sa osnovnim komandama za navigaciju Linux fajl sistemom, baratanje fajlovima i direktorijumima, kao i manipulaciju prava pristupa fajlovima. Takođe smo napravili uvod u Beš i pisanje Beš skripta.
+
 ## Komanda `ls`
 
 Listanje direktorijuma može se uraditi komandom `ls`. Komanda `ls` prikazuje sadržaj tekućeg direktorijuma: fajlove, direktorijume i sve ostalo. Izuzetak su, recimo, skriveni fajlovi, čija imena počinju tačkom (na primer, tekući direktorijum `.` i roditeljski direktorijum `..`). Ukoliko želimo da vidimo skrivene fajlove, možemo navesti opciju `-a`:
