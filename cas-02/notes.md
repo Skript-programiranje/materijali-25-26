@@ -141,7 +141,27 @@ fi
 
 ## Kontrola toka - "for each" petlja
 
-TODO
+Beš podržava iteriranje for petljom sa `for ... in ...` sintaksom:
+```bash
+for variable in items
+do
+    # do something
+done
+```
+pri čemu su `items` niske razdvojene belinama, a u svakoj iteraciji se u promenljivu `variable` smešta sledeća niska iz `items`. Niske `items` mogu biti navedene bukvalno, na primer:
+```bash
+for fruit in apples oranges strawberries
+do
+    echo "I like $fruit"
+done
+```
+Takođe, `items` može biti dobijeno ekspanzijom:
+```bash
+for number in {1..5}
+do
+    echo "Iteration: $number"
+done
+```
 
 ### Primer "for each" petlje - iteriranje kroz argumente
 
