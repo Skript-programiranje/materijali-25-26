@@ -1,8 +1,8 @@
 # Druga nedelja vežbi
-Na ovom času pisani su Beš skriptovi i obrađeni su parametri i promenljive, osnovna kontrola toka i različite vrste ekspanzija u Bešu.
+Ove nedelje, pisani su Beš skriptovi. Obrađeni su parametri i promenljive, osnovna kontrola toka i različite vrste ekspanzija u Bešu.
 
 ## Parametri i promenljive
-U Bash-u mozemo deklarisati promenljive na sledeći način:
+U Bešu mozemo deklarisati promenljive na sledeći način:
 ```bash
 promenljiva=vrednost
 ```
