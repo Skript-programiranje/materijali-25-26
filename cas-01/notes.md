@@ -1,41 +1,41 @@
-## Команда `ls`
+## Komanda `ls`
 
-Листање директоријума може се урадити командом `ls`. Команда `ls` приказује садржај текућег директоријума: фајлове, директоријуме и све остало. Изузетак су, рецимо, скривени фајлови, чија имена почињу тачком (на пример, текући директоријум `.` и родитељски директоријум `..`). Уколико желимо да видимо скривене фајлове, можемо навести опцију `-a`:
+Listanje direktorijuma može se uraditi komandom `ls`. Komanda `ls` prikazuje sadržaj tekućeg direktorijuma: fajlove, direktorijume i sve ostalo. Izuzetak su, recimo, skriveni fajlovi, čija imena počinju tačkom (na primer, tekući direktorijum `.` i roditeljski direktorijum `..`). Ukoliko želimo da vidimo skrivene fajlove, možemo navesti opciju `-a`:
 
 ```bash
 $ ls -a
 ...
 ```
 
-Такође корисна опција је `-l` за испис у дугом формату (енг. *long format*).
+Takođe korisna opcija je `-l` za ispis u dugom formatu (eng. *long format*).
 
 ```bash
 $ ls -l
 ...
 ```
 
-`ll` је често алијас за команду `ls` са опцијама `-a`, `-l`, `-F`.
+`ll` je često alijas za komandu `ls` sa opcijama `-a`, `-l`, `-F`.
 
 ```bash
 $ ll
 ...
 ```
 
-Алијас је, као што име каже, друго име за неку команду (обично са неким специфичним опцијама). Ако желимо да видимо постављене алијасе, можемо то урадити командом `alias`:
+Alijas je, kao što ime kaže, drugo ime za neku komandu (obično sa nekim specifičnim opcijama). Ako želimo da vidimo postavljene alijase, možemo to uraditi komandom `alias`:
 
 ```bash
 $ alias
 ...
 ```
 
-Специфично можемо да видимо шта представља неки конкретан алијас путем `alias [naziv_alijasa]`, на пример:
+Specifično možemo da vidimo šta predstavlja neki konkretan alijas putem `alias [naziv_alijasa]`, na primer:
 
 ```bash
 $ alias ll
 alias ll='ls -l'
 ```
 
-Такође, инфомацију о типу команде или алијаса можемо добити командом `type`:
+Takođe, infomaciju o tipu komande ili alijasa možemo dobiti komandom `type`:
 
 ```bash
 $ type ll
@@ -46,9 +46,9 @@ cat is /usr/bin/cat
 
 ---
 
-## Прављење и брисање фајлова и директоријума
+## Pravljenje i brisanje fajlova i direktorijuma
 
-Фајл се може направити командом `touch`:
+Fajl se može napraviti komandom `touch`:
 
 ```bash
 $ touch file.txt
@@ -56,7 +56,7 @@ $ ls
 file.txt
 ```
 
-Фајлове можемо обрисати командом `rm`:
+Fajlove možemo obrisati komandom `rm`:
 
 ```bash
 $ ls
@@ -66,9 +66,9 @@ $ ls
 another.txt
 ```
 
-Команду `rm` треба користити *веома* пажљиво, јер је брисање које она врши неоповратно!
+Komandu `rm` treba koristiti *veoma* pažljivo, jer je brisanje koje ona vrši neopovratno!
 
-Уколико желимо да направимо директоријум, то можемо урадити командом `mkdir`:
+Ukoliko želimo da napravimo direktorijum, to možemo uraditi komandom `mkdir`:
 
 ```bash
 $ ls
@@ -78,7 +78,7 @@ $ ls
 01_prvi.txt 02_drugi.txt zadaci
 ```
 
-Командом `rmdir` можемо обрисати празне директоријуме.
+Komandom `rmdir` možemo obrisati prazne direktorijume.
 
 ```bash
 $ ls
@@ -88,7 +88,7 @@ $ ls
 01_prvi.txt 02_drugi.txt
 ```
 
-Фајл можемо копирати командом `cp`.
+Fajl možemo kopirati komandom `cp`.
 
 ```bash
 $ ls
@@ -106,7 +106,7 @@ some
 content
 ```
 
-Командом `mv` можемо померити или преименовати фајл. Основни облик коришћења ове команде је `mv <source> <destination>`. Уколико `source` и `destination` имају исти родитељски директоријум, онда се врши преименовање `source` у `destination`. У супротном се `source` помера у родитељски директоријум фајла `destination`.
+Komandom `mv` možemo pomeriti ili preimenovati fajl. Osnovni oblik korišćenja ove komande je `mv <source> <destination>`. Ukoliko `source` i `destination` imaju isti roditeljski direktorijum, onda se vrši preimenovanje `source` u `destination`. U suprotnom se `source` pomera u roditeljski direktorijum fajla `destination`.
 
 ```bash
 $ ls -R
@@ -128,16 +128,16 @@ caitlyn.txt  david.txt
 
 ---
 
-## Кретање кроз фајл систем
+## Kretanje kroz fajl sistem
 
-Тренутни радни директоријум може се видети командом `pwd`.
+Trenutni radni direktorijum može se videti komandom `pwd`.
 
 ```bash
 $ pwd
 /home/sp/
 ```
 
-Тренутни радни директоријум се може променити командом `cd`.
+Trenutni radni direktorijum se može promeniti komandom `cd`.
 
 ```bash
 $ ls
@@ -147,7 +147,7 @@ $ pwd
 /home/sp/vezbe
 ```
 
-Уколико имамо потребу да се често пребацујемо између више директоријума, корисне су команде `pushd` и `popd`.
+Ukoliko imamo potrebu da se često prebacujemo između više direktorijuma, korisne su komande `pushd` i `popd`.
 
 ```bash
 $ pwd
@@ -180,22 +180,22 @@ $ pwd
 
 ---
 
-## Измене дозвола над фајловима
+## Izmene dozvola nad fajlovima
 
 ```bash
 $ ls -l
 -rw-r-x-w- 1 sp sp   146 Mar 18 09:50 1.sh
 ```
 
-Прва колона се састоји од 10 карактера и носи информације о дозволама.
+Prva kolona se sastoji od 10 karaktera i nosi informacije o dozvolama.
 
-| Тип | Власник | Група | Остали |
+| Tip | Vlasnik | Grupa | Ostali |
 |-----|--------|-------|--------|
 | `-` | `rw-`  | `r-x` | `-w-`  |
 
-Карактер `r` означава читање, `w` писање, `x` извршавање, а `-` недостатак дозволе.
+Karakter `r` označava čitanje, `w` pisanje, `x` izvršavanje, a `-` nedostatak dozvole.
 
-### Текстуални начин
+### Tekstualni način
 
 ```bash
 $ chmod u+x 1.sh
@@ -209,7 +209,7 @@ $ ls -l
 -rwxr--rw- 1 sp sp   146 Mar 18 09:50 1.sh
 ```
 
-### Нумерички начин
+### Numerički način
 
 `rwxr--rw-` → `111100110` → `745`
 
@@ -221,7 +221,7 @@ $ ls -l
 
 ---
 
-## Променљиве окружења
+## Promenljive okruženja
 
 ```bash
 $ x=10
@@ -243,43 +243,43 @@ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/bin
 ...
 ```
 
-## Покретање скрипти
+## Pokretanje skripti
 
-Једна од главних предности интеракције са рачунаром помоћу командне линије јесте
-аутоматизација помоћу шел (shell) скрипти.
-Команде се могу написати у текстуалном фајлу, а тај фајл се затим може дати шелу
-да га изврши.
+Jedna od glavnih prednosti interakcije sa računarom pomoću komandne linije jeste
+automatizacija pomoću šel (shell) skripti.
+Komande se mogu napisati u tekstualnom fajlu, a taj fajl se zatim može dati šelu
+da ga izvrši.
 
-На пример, ако направимо фајл `zdravo.sh` са следећим садржајем:
+Na primer, ako napravimo fajl `zdravo.sh` sa sledećim sadržajem:
 ```bash
 echo "Zdravo, svete!"
 ```
 
-Можемо да је покренемо на следећи начин:
+Možemo da je pokrenemo na sledeći način:
 ```bash
 $ bash zdravo.sh
 Zdravo, svete!
 ```
 
-Други, чешћи, начин је да скрипте покрећемо тако што:
-1. скрипти доделимо право извршавања:
+Drugi, češći, način je da skripte pokrećemo tako što:
+1. skripti dodelimo pravo izvršavanja:
 ```bash
 $ chmod +x zdravo.sh
 ```
-2. покренемо скрипту као извршиви фајл:
+2. pokrenemo skriptu kao izvršivi fajl:
 ```bash
 $ ./zdravo.sh
 Zdravo, svete!
 ```
 
-Међутим, да бисмо то радили, потребно је да у скрипти задамо који програм треба
-да је извршава.
-У овом случају, то ће бити `bash`, па је потребно да то додамо.
-То се ради тако што се на почетку скрипте постави линија која почиње `#!` (енгл.
-*shebang*) коју прати путања до програма.
+Međutim, da bismo to radili, potrebno je da u skripti zadamo koji program treba
+da je izvršava.
+U ovom slučaju, to će biti `bash`, pa je potrebno da to dodamo.
+To se radi tako što se na početku skripte postavi linija koja počinje `#!` (engl.
+*shebang*) koju prati putanja do programa.
 
-На пример, ако команда `which bash` враћа `/usr/bin/bash`, онда се скрипта може
-изменити на следећи начин:
+Na primer, ako komanda `which bash` vraća `/usr/bin/bash`, onda se skripta može
+izmeniti na sledeći način:
 ```bash
 #!/usr/bin/bash
 
