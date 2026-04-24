@@ -59,7 +59,7 @@ To treba uraditi na sledeći način:
 - Akcije u prethodnim stavkama bivaju praćene odgovarajućim porukama o njihovom uspehu (pogledati format ispisa u nastavku).
 - Zatim, prikazuje se sadržaj direktorijuma `repository/test`
 
-Ukoliko skriptu `initialize_repository.sh` nije prosleđeno tačno 2 argumenta, ispisuje se poruka o namenjenoj upotrebi i skript se završava sa statusom o grešci i ne izvršava se nijedna od prethodno navedenih stavki. Ukoliko skriptu jeste prosleđen adekvatan broj argumenata i sve stavke se izvrše bez problema, skript ispisuje poruku kojom opisuje da je završio posao i završava se vraćajući status o uspehu.
+Ukoliko skriptu `initialize_repository.sh` nije prosleđen tačno jedan argumenta, ispisuje se poruka o namenjenoj upotrebi i skript se završava sa statusom o grešci i ne izvršava se nijedna od prethodno navedenih stavki. Ukoliko skriptu jeste prosleđen adekvatan broj argumenata i sve stavke se izvrše bez problema, skript ispisuje poruku kojom opisuje da je završio posao i završava se vraćajući status o uspehu.
 
 ## Primeri izvršavanja
 
