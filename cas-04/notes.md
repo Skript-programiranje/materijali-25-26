@@ -101,7 +101,7 @@ Ovi tokovi (kao i maltene sve na Linux sistemima) su predstavljeni fajlovima i i
 - `2` za standardni izlaz za greške.
 
 Standardni ulaz (koji ćemo često kraće označavati i sa `stdin`) je uobičajeno vezan za tastaturu.
-Standardni izlaz i standardni izlaz za greške (koje ćemo kraćeiy označavati sa `stdout` i `stderr`, redom) su vezani za terminal.
+Standardni izlaz i standardni izlaz za greške (koje ćemo kraće označavati sa `stdout` i `stderr`, redom) su vezani za terminal.
 Ovo se može promeniti *preusmeravanjem* tokova podataka.
 
 ### Preusmeravanje standardnog izlaza
@@ -137,7 +137,11 @@ S druge strane, ispis na standardni izlaz je uspešno preusmeren u fajl `my_file
 
 ### Preusmeravanje standardnog izlaza za greške
 
-Preusmeravanje standardnog izlaza za greške se vrši operatorom `2>`.
+Operator `>` podrazumevano preusmerava standardni izlaz na odgovarajući fajl
+koji prima kao argument sa desne strane.
+Pored toga, može primiti i fajl deskriptor sa leve strane koji označava izlaz
+koji treba preusmeriti.
+Zato se preusmeravanje standardnog izlaza za greške vrši  pomoću komande `2>`.
 Ukombinujmo to sa preusmeravanjem standardnog izlaza iz prethodnog primera:
 ```bash
 $ ls -R /student > my_files.log 2> errors.log
@@ -152,9 +156,9 @@ ls: cannot access '/student': No such file or directory
 
 ### Dopisivanje, umesto prepisivanja
 
-Operatori `>` i `2>` preusmeravaju standardne izlaze *prepisivanjem* preko postojećeg sadržaja u fajlu u koji se preusmerava.
-Ukoliko želimo da *dopisujemo*, ne menjajući postojeći sadržaj, to postižemo operatorima `>>` i `2>>`.
-Pokažimo to na primeru operatora `>>`:
+Operator `>` preusmerava izlaz *prepisivanjem* preko postojećeg sadržaja u fajlu u koji se preusmerava.
+Ukoliko želimo da *dopisujemo*, ne menjajući postojeći sadržaj, to postižemo operatorom `>>`.
+Pokažimo to na primeru:
 ```bash
 $ echo "hi!" >> messages.txt
 $ echo "here's a message" >> messages.txt
@@ -166,7 +170,7 @@ hi!
 here's a message
 and here's another one!
 ```
-Analogno važi i za operator `2>>`.
+Analogno važi i za preusmeravanje standardnog izlaza za greske pomoću `2>>`.
 
 ### Operator `&>`
 
@@ -181,6 +185,25 @@ ls: cannot access 'does_not_exist.txt': No such file or directory
 exists.txt
 ```
 Primetimo da su i standardni ispis i ispis o grešci upisani u fajl.
+
+### Operator `>&`
+
+Operatori `>` i `&>` sa desne strane primaju fajl u koji treba preusmeriti
+izlaz.
+Ukoliko bismo želeli da preusmerimo izlaz na fajl deskriptor, npr. standardni
+izlaz za greske na standardni izlaz, bio bi nam potreban novi operator.
+Operator `>&` služi upravo tome i omogućava preusmeravanje ulaza zadatog
+fajl deskriptorom na drugi fajl deskriptor.
+
+Na primer, ako želimo da se greške GCC kompajlera ispisuju na `stdout` umesto
+na `stderr`, to možemo da uradimo na sledeći način:
+```bash
+$ g++ test.cpp 2>&1
+```
+
+*Napomena*: Primetimo da bi komanda `g++ test.cpp 2>1` preusmerila `stderr` na
+fajl sa nazivom `1`.
+
 
 ### Pajpovanje
 
@@ -199,9 +222,9 @@ Ovaj operator je izuzetno koristan i koristićemo ga (između ostalog) za manipu
 
 ### Pregled operatora za preusmeravanje
 
-U narednoj tabeli, mogu se videti neki osnovni operatori preusmeravanja i njihov opis.
+U narednoj tabeli, mogu se videti neke osnovne komande preusmeravanja i njihov opis.
 
-| operator | značenje |
+| komanda | značenje |
 | --- | --- |
 | `<` | preusmeravanje standardnog ulaza |
 | `>` | preusmeravanje standardnog izlaza |
@@ -209,5 +232,6 @@ U narednoj tabeli, mogu se videti neki osnovni operatori preusmeravanja i njihov
 | `2>` | preusmeravanje standardnog izlaza za greške |
 | `2>>` | preusmeravanje standardnog izlaza za greške (dopisivanjem umesto prepisivanjem) |
 | `&>` | preusmeravanje standardnog izlaza i standardnog izlaza za greške |
+| `2>&1` | preusmeravanje standardnog izlaza za greške na standardni izlaz |
 | `\|` | prosleđivanje sadržaja sa standardnog izlaza jedne komande na standardni ulaz druge komande |
 
