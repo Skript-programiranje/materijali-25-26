@@ -165,3 +165,5 @@ označavati pokpanja za uneti regularni izraz.
     - regularni izraz `program\b` prepoznaje samo one reči *program* kojima se
     završavaju reči u tekstu (gde reči u tekstu definišemo kao celine razvdojene
     belinama, novim redovima i ostalim srodnim karakterima)
+
+[web-regex101]: https://regex101.com/
