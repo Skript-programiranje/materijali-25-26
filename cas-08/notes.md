@@ -541,7 +541,7 @@ Na primer:
 ```
 10
 ```
-Razlikujemo *pozicione* argumente funkcija, koji moraju biti navedeni u onom redosledu u kom su navedeni u potpisu funkcije, i *imenovane* argumente, koji se mogu navesti u tom redosledu, ali se mogu navesti i svojim imenom (TODO: preformulisati lepše).
+Razlikujemo *pozicione* argumente funkcija, koji moraju biti navedeni u onom redosledu u kom su navedeni u potpisu funkcije, i *imenovane* argumente, koji se mogu navesti u tom redosledu, ali se mogu navesti i svojim imenom.
 Imenovani argumenti se moraju navesti nakon pozicionih.
 Redosled imenovanih argumenata nije važan.
 Na primer:
