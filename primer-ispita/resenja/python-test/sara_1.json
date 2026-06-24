@@ -1,0 +1,14 @@
+[
+  {
+    "fishType": "Sardine",
+    "number": 50
+  },
+  {
+    "fishType": "Shrimp",
+    "number": 80
+  },
+  {
+    "fishType": "Bass",
+    "number": 5
+  }
+]

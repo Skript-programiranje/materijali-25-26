@@ -1,0 +1,18 @@
+[
+  {
+    "fishType": "Tuna",
+    "number": 1
+  },
+  {
+    "fishType": "Carp",
+    "number": 20
+  },
+  {
+    "fishType": "Shrimp",
+    "number": 100
+  },
+  {
+    "fishType": "Sardine",
+    "number": 3
+  }
+]
