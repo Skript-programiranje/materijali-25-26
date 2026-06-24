@@ -1,0 +1,62 @@
+[
+    {
+        "ime": "Milos",
+        "prezime": "Jovanovic",
+        "indeks": "023/2021",
+        "ocene": [8, 9, 10, 7, 8]
+    },
+    {
+        "ime": "Ana",
+        "prezime": "Petrovic",
+        "indeks": "104/2020",
+        "ocene": [10, 10, 9]
+    },
+    {
+        "ime": "Nikola",
+        "prezime": "Nikolic",
+        "indeks": "007/2019",
+        "ocene": [6, 7, 8, 8, 9, 6]
+    },
+    {
+        "ime": "Jelena",
+        "prezime": "Markovic",
+        "indeks": "315/2022",
+        "ocene": [9, 8, 10, 10]
+    },
+    {
+        "ime": "Stefan",
+        "prezime": "Stojanovic",
+        "indeks": "589/2018",
+        "ocene": [7, 7, 8, 6, 9, 10, 8]
+    },
+    {
+        "ime": "Marija",
+        "prezime": "Ilic",
+        "indeks": "041/2023",
+        "ocene": [10, 9, 9, 8, 10]
+    },
+    {
+        "ime": "Luka",
+        "prezime": "Pavlovic",
+        "indeks": "276/2017",
+        "ocene": [6, 8, 7]
+    },
+    {
+        "ime": "Tamara",
+        "prezime": "Djordjevic",
+        "indeks": "198/2024",
+        "ocene": [8, 8, 9, 7, 10, 9]
+    },
+    {
+        "ime": "Vuk",
+        "prezime": "Popovic",
+        "indeks": "512/2016",
+        "ocene": [9, 10, 10, 8]
+    },
+    {
+        "ime": "Ivana",
+        "prezime": "Simic",
+        "indeks": "064/2025",
+        "ocene": [7, 8, 6, 9, 9, 10, 8, 7]
+    }
+]
